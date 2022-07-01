@@ -21,10 +21,10 @@ const Home = () => {
     },[])
     //3-Configuramos las columnas para DataTable
     const columns= [
-        {
+       /* {
           name : 'ID',
           selector: row=> row.id
-      },
+      },*/
       {
           name : 'NOMBRE',
           selector: row => row.name,
@@ -74,6 +74,8 @@ const Home = () => {
           disabled: 'rgba(0,0,0,.12)',
         },
     }, 'dark');
+
+
     //4-Mostrar Data en DataTable
     const paginationComponentOptions = {
           rowsPerPageText: 'Filas por página',
@@ -84,8 +86,8 @@ const Home = () => {
 
    return (
       <div>
-         <h1>View Home</h1>
-             <h1>DataTable de Clientes x Fectch</h1>
+         <h1>PRINCIPAL</h1>
+             <h1>Table de Clientes x Fectch</h1>
         <DataTable
           title="Clientes"
           fixedHeader //permite fijar los titulos
@@ -97,7 +99,7 @@ const Home = () => {
           selectableRowsHighlight
           pagination paginationComponentOptions={paginationComponentOptions}
           responsive
-          pointerOnHover
+          //pointerOnHover
           striped
           onColumnOrderChange={cols => console.log(cols)}
         />

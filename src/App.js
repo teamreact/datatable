@@ -6,6 +6,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import About from './components/about';
 import Contact from './components/contact';
 import Home from './components/home';
+import Devexpress from './components/devexpress';
 import NavBarExample from './layouts/navbar';
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
                 <Route index element={<Home />}></Route>
                 <Route path='about' element={<About />}></Route>
                 <Route path='contact' element={<Contact />}></Route>
+                <Route path='devExpress' element={<Devexpress />}></Route>
                 <Route path='*' elemnt={<Navigate replace to="/"/>}/>
               </Route>
             </Routes>
